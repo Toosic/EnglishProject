@@ -1,0 +1,499 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:  rgb(216, 215, 215);
+    color: black;
+    font-family: "Source Sans Pro";
+}
+#about{
+  font-family: "Source Sans Pro";
+  font-size: 22px;
+  text-align: center;
+  background-color: rgb(216, 215, 215);
+}
+.talk{
+  background-color: rgb(182, 182, 182);
+  text-align: center;
+  font-family: "Source Sans Pro";
+  font-size: 22px;
+}
+.sunrise{
+  text-decoration-line: underline ;
+  font-size: 3rem;
+}
+.section{
+    height: 100vh;
+}
+
+.section h1{
+    text-align: center;
+    line-height: 100vh;
+    font-size: 5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: underline;
+	font-family: 'Times New Roman';
+}
+
+.section .by{
+    text-align: center;
+    line-height: -220vh;
+    font-size: 4rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.section h1 span{
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateY(50px);
+    display: inline-block;
+}
+
+.section .fadeMove{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.section2 .images{
+    display: flex;
+}
+
+.section2 .images img{
+    width: 50%;
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+.section2 .images img.slideFromLeft{
+    transform: translateX(-50%);
+}
+
+.section2 .images img.slideFromRight{
+    transform: translateX(50%);
+}
+
+.section2 .images img.animated {
+    transform: translateX(0);  
+    opacity: 1;
+}
+
+.section2 h1{
+    line-height: 1.5;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
+.border-line{
+    height: 2px;
+    width: 0%;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.5s ease;
+}
+
+/* TIMELINE ISKOPIRANO OD NET :)*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align:center;
+  font-size: 40px;
+}
+
+ul {
+  padding: 50px 0;
+}
+
+ul li {
+  position:relative;
+  list-style-type: none;
+  width: 6px;
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+ul li::after {
+  background: white;
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  }
+
+
+ul li div{
+  position: relative;
+  width: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  bottom: 0;
+  background: rgba(42,50,113, .28);
+}
+
+ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+ul li:nth-child(even) div {
+  left: -445px;
+}
+
+time {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  ul li div {
+    width: 250px;
+  }
+  ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+/*OVO SAM JA RADIL :)*/
+hr{
+    color: aliceblue;
+}
+#shell{
+  background-image: url("SHELL.jpg");
+
+}
+ 
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.forms-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    margin-left: 800px; /*LEPSE IZGLEDA OVAKO AL KAD SE SMANJI SVE OSTALO SE SMANJI PROPORCIONALNO SAMO OVO OSTANE TOLKA VELICINA, MSM KAD SE UMANJI OPERA RECIMO, KAP STA OCU DA 
+	KAZEM, AKO ZNAS NAMESTI GA AKO NMVZ, A AKO IZBRISEMO 213 RED ONA CE SI STOJI NA CENTAR I CE SE SMANJUJE PROPOCIONALNO*/
+}
+
+
+
+.forms {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 30px;
+}
+
+.form-wrapper {
+	animation: hideLayer .3s ease-out forwards;
+}
+
+.form-wrapper.is-active {
+	animation: showLayer .3s ease-in forwards;
+}
+
+@keyframes showLayer {
+	50% {
+		z-index: 1;
+	}
+	100% {
+		z-index: 1;
+	}
+}
+
+@keyframes hideLayer {
+	0% {
+		z-index: 1;
+	}
+	49.999% {
+		z-index: 1;
+	}
+}
+
+.switcher {
+	position: relative;
+	cursor: pointer;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0;
+	text-transform: uppercase;
+	font-family: inherit;
+	font-size: 16px;
+	letter-spacing: .5px;
+	color: rgb(0, 0, 0);
+	background-color: transparent;
+	border: none;
+	outline: none;
+	transform: translateX(0);
+	transition: all .3s ease-out;
+}
+
+.form-wrapper.is-active .switcher-login {
+	color: black;
+	transform: translateX(90px);
+}
+
+.form-wrapper.is-active .switcher-login:hover {
+  color: black;
+}
+
+.form-wrapper.is-active .switcher-signup {
+	color: black;
+	transform: translateX(-90px);
+}
+
+.form-wrapper.is-active .switcher-signup:hover {
+  color: black;
+}
+
+.underline {
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	overflow: hidden;
+	pointer-events: none;
+	width: 100%;
+	height: 2px;
+}
+
+.underline::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: inherit;
+	display: block;
+	width: inherit;
+	height: inherit;
+	background-color: currentColor;
+  
+	transition: transform .2s ease-out;
+}
+
+.switcher-login .underline::before {
+	transform: translateX(101%);
+}
+
+.switcher-signup .underline::before {
+	transform: translateX(-101%);
+}
+
+.form-wrapper.is-active .underline::before {
+	transform: translateX(0);
+}
+
+.form {
+	overflow: hidden;
+	min-width: 260px;
+	margin-top: 50px;
+	padding: 30px 25px;
+  border-radius: 5px;
+	transform-origin: top;
+}
+
+.form-login {
+	animation: hideLogin .3s ease-out forwards;
+  color: black;
+
+}
+
+.form-wrapper.is-active .form-login {
+	animation: showLogin .3s ease-in forwards;
+}
+
+@keyframes showLogin {
+	0% {
+		background: #d7e7f1;
+		transform: translate(40%, 10px);
+	}
+	50% {
+		transform: translate(0, 0);
+	}
+	100% {
+		background-color: #fff;
+		transform: translate(35%, -20px);
+	}
+}
+
+@keyframes hideLogin {
+	0% {
+		background-color: #fff;
+		transform: translate(35%, -20px);
+	}
+	50% {
+		transform: translate(0, 0);
+	}
+	100% {
+		background: #d7e7f1;
+		transform: translate(40%, 10px);
+	}
+}
+
+.form-signup {
+	animation: hideSignup .3s ease-out forwards;
+  color: black;
+}
+
+.form-wrapper.is-active .form-signup {
+	animation: showSignup .3s ease-in forwards;
+}
+
+@keyframes showSignup {
+	0% {
+		background: #d7e7f1;
+		transform: translate(-40%, 10px) scaleY(.8);
+	}
+	50% {
+		transform: translate(0, 0) scaleY(.8);
+	}
+	100% {
+		background-color: #fff;
+		transform: translate(-35%, -20px) scaleY(1);
+	}
+}
+
+@keyframes hideSignup {
+	0% {
+		background-color: #fff;
+		transform: translate(-35%, -20px) scaleY(1);
+	}
+	50% {
+		transform: translate(0, 0) scaleY(.8);
+	}
+	100% {
+		background: #d7e7f1;
+		transform: translate(-40%, 10px) scaleY(.8);
+	}
+}
+
+#gma{
+	width: 50px;
+	height: 50px;
+	margin-left: -250px;
+}
+#cont{
+	margin-top: -40px;
+	margin-left: 10px;
+}
+/*
+ * SLIDER
+ */
+
+ .slider-wrapper {
+    max-width: 300px;
+    height: 450px;
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.slider-wrapper .slider-images {
+	height: 100%;
+}
+
+.slider-wrapper .slider-images img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: none;
+}
+
+.slider-wrapper .slider-images img:first-child {
+	display: block;
+}
+
+.slider-wrapper button {
+    height: 65px;
+    width: 65px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    top: 40%;
+    position: absolute;
+	z-index: 999;
+}
+
+.slider-wrapper button .arrow {
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 10px;
+    transition: transform 0.3s ease-out;
+    outline: none;
+}
+
+.slider-wrapper #right-btn {
+    right: 0;
+}
+
+.slider-wrapper #right-btn .arrow {
+    transform: rotate(-45deg);
+}
+
+.slider-wrapper #left-btn {
+    left: 0;
+}
+
+.slider-wrapper #left-btn .arrow {
+    transform: rotate(135deg);
+}
+
+
+.slider-wrapper #right-btn-second {
+    right: 0;
+}
+
+.slider-wrapper #right-btn-second .arrow {
+    transform: rotate(-45deg);
+}
+
+.slider-wrapper #left-btn-second {
+    left: 0;
+}
+
+.slider-wrapper #left-btn-second .arrow {
+    transform: rotate(135deg);
+}
+
